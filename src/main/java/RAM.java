@@ -40,7 +40,7 @@ public class RAM {
         return input.nextInt();
     }
     public static boolean validarFrecuencia(int numero){
-        return 0 <= numero && numero <= 255;
+        return 1500 <= numero && numero <= 5000;
     }
 
     public String getMarca() {
