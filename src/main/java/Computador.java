@@ -9,7 +9,7 @@ public class Computador {
     public Computador() {
         asignarMarca();
         asignarModelo();
-        asignarRAM();
+        agregarRAM();
 
     }
 
@@ -25,9 +25,25 @@ public class Computador {
         nombre = this.modelo;
     }
 
-    private void asignarRAM() {
+    private void agregarRAM() {
         System.out.println("¿Que memoria quiere agregar?");
+        do {
+            memoriasRam.add(new RAM());
+        }while (numeroMaximoMemorias());
+    }
+    private void eliminarRAM(){
+        for (int i = 0; i < memoriasRam.size(); i++) {
 
+        }
+    }
+
+    private void mostrarMemorias(){
+        for (int i = 0; i < memoriasRam.size(); i++) {
+            System.out.println(i);
+        }
+    }
+    private boolean numeroMaximoMemorias(){
+        return 1<= memoriasRam.size() && memoriasRam.size()<=6;
     }
 
     public static String leerNombre() {
